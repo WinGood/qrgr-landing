@@ -3,6 +3,7 @@
   "description": "qrgr landing",
   "version": "0.0.1",
   "dependencies": {
-    "normalize-css": "latest"
+    "normalize-css": "latest",
+    "jquery": "latest"
   }
 }

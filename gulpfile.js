@@ -6,6 +6,9 @@ var gulp            = require('gulp'),
     livereload      = require('gulp-livereload'),
     plumber         = require("gulp-plumber"),
     coffee          = require('gulp-coffee'),
+    browserify      = require("browserify"),
+    vinylSource     = require("vinyl-source-stream"),
+    debowerify      = require('debowerify');
     es              = require("event-stream");
 
 gulp.task('jade', function(){
@@ -43,7 +46,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('coffee', function(){
-    gulp.src('./src/coffee/*.coffee')
+    gulp.src('./src/coffee/main.coffee')
         .pipe(plumber({
             errorHandler: function(err){
                 console.log(err);
@@ -51,6 +54,15 @@ gulp.task('coffee', function(){
             }
         }))
         .pipe(coffee({bare: true}))
+        .pipe(gulp.dest('./assets/js/'));
+
+    return browserify('./assets/js/main.js')
+        .transform(debowerify)
+        .bundle().on('error', function(err){
+            console.log(err.toString());
+            this.emit('end');
+        }) // EventEmitter
+        .pipe(vinylSource('combined.js'))
         .pipe(gulp.dest('./assets/js/'));
 });
 
