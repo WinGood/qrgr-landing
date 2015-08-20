@@ -21,6 +21,7 @@ gulp.task('jade', function(){
         }))
         .pipe(jade())
         .pipe(gulp.dest('./'))
+        .pipe(livereload());
 });
 
 gulp.task('sass', function(){
@@ -72,7 +73,7 @@ gulp.task('dev', function(){
     // Jade
     gulp.watch([
         './src/jade/*.jade'
-    ], ['jade']).on('change', livereload.changed);
+    ], ['jade']);
 
     // Sass
     gulp.watch([

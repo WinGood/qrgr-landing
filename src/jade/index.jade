@@ -1,15 +1,43 @@
 doctype html
 html(lang="en")
     head
-        title= "test"
+        title= "Landing QRGR"
         meta(charset="utf-8")
         link(href="/assets/css/combined.css", rel="stylesheet", type="text/css")
         script(src="/assets/js/combined.js")
     body
-        h1 Jade - node template engine 2
-        #container.col
-            p.
-                Jade is a terse and simple
-                templating language with a
-                strong focus on performance
-                and powerful features.
+        #header.clearfix.wrapper
+            .left
+                h1 Quality Recruiting Group
+            .right.text-right
+                p Есть вопросы? Звоните!<br>+7 (495) 410-72-00
+                a(href="#").btn.primary Заказать звонок
+        #section-1
+            .wrapper
+                p 12 и 13 сентября 2015 г.
+                h2 ТРЕНИНГ-ИНТЕНСИВ
+                p.subtitle Все секреты<br>EXECUTIVE SEARCH & HEADHUNTING
+                p 4-х модульный курс<br>о новейших стратегиях и методах подбора персонала
+                p.subtitle-2 А ТЫ ХОЧЕШЬ БЫТЬ ПРОФИ В ОХОТЕ НА ЛУЧШИЕ КАДРЫ?
+                a(href="#").btn.orange ЗАПИСАТЬСЯ НА ТРЕНИНГ
+        #section-2.wrapper
+            p.title Старые методы и инструменты подбора персонала<br><span>уже не работают!</span>
+            .body.clearfix
+                .right
+                    .content
+                        ul
+                            li - Правила и рынок труда изменились!
+                            li - Битва за таланты и кадры стала жестче,<br><span>а конкуренты хитрее!</span>
+                            li - Наступает время агрессивного рекрутинга!
+                        p Чтобы быть лучшим,<br>нужно быть в числе первых!
+                    p.red А ТЫ Хочешь быть в числе победителей?
+        #section-3
+            .wrapper.clearfix
+                .left
+                    p.title Для кого:
+                    ul
+                        li <span>Рекрутеров</span><br>(-фрилансеров)
+                        li <span>Менеджеров</span><br>по персоналу
+                        li <span>Руководителей</span><br>HR-отделов
+                .right
+                    span ДЛЯ ВСЕХ,<br>кто занимается<br>подбором персонала <br>и<br>хочет быть <br>в этой области <br>профессионалом!
