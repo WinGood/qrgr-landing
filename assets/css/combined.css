@@ -478,6 +478,7 @@ body {
   border: none;
   line-height: 30px;
   display: block;
+  outline: none;
   text-transform: uppercase; }
   .btn.primary {
     color: #119e64;
@@ -513,14 +514,14 @@ body {
       background: -webkit-linear-gradient(top, #dde004 0%, #dde004 100%);
       background: linear-gradient(to bottom, #dde004 0%, #dde004 100%); }
 
-.form {
+.form, .modal-content {
   margin: 15px 0; }
-  .form .form-el {
+  .form .form-el, .modal-content .form-el {
     margin-bottom: 15px; }
-    .form .form-el label {
+    .form .form-el label, .modal-content .form-el label {
       display: block;
       margin-bottom: 10px; }
-    .form .form-el input {
+    .form .form-el input, .modal-content .form-el input {
       border: 1px solid #959595;
       color: #555555;
       display: inline-block;
@@ -528,15 +529,48 @@ body {
       padding: 15px 75px;
       outline: none;
       font-size: 18px; }
-      .form .form-el input:focus {
+      .form .form-el input:focus, .modal-content .form-el input:focus {
         border: 1px solid #000; }
-  .form .form-btn {
+  .form .form-btn, .modal-content .form-btn {
     margin-top: 25px; }
-    .form .form-btn .btn {
+    .form .form-btn .btn, .modal-content .form-btn .btn {
       display: block;
       width: 100%;
       font-size: 22px;
       margin: 0 auto; }
+
+.modal .modal-title {
+  background-color: #ebab27;
+  color: white;
+  padding: 15px 20px;
+  padding-right: 50px;
+  font-size: 18px;
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0; }
+
+.modal .modal-desc {
+  border-bottom: 1px solid #dedede;
+  padding: 15px 20px;
+  background: #efefef; }
+
+.modal .modal-btns {
+  padding: 15px 20px;
+  border-top: 1px solid #c0c0c0;
+  background-color: #f1f1f1;
+  -webkit-border-radius: 0px 0px 4px 4px;
+          border-radius: 0px 0px 4px 4px; }
+
+.modal .modal-content {
+  padding: 0 20px; }
+  .modal .modal-content input {
+    padding: 8px 12px;
+    font-size: 16px; }
+
+.red {
+  color: #df0606; }
+
+.hidden {
+  display: none; }
 
 #header {
   height: 100px; }
