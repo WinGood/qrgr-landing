@@ -1,0 +1,12 @@
+{
+    "name": "zzzaki/qrgr.ru",
+    "require": {
+        "swiftmailer/swiftmailer": "^5.4"
+    },
+    "authors": [
+        {
+            "name": "zzzaki",
+            "email": "techokill@gmail.com"
+        }
+    ]
+}

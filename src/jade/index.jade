@@ -8,7 +8,7 @@ html(lang="en")
         script(src="https://code.jquery.com/jquery-1.11.3.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js")
         script(src="/assets/js/form-validator.js")
-        script(src="/assets/js/combined.js")
+        script(src="/assets/js/main.js")
     body
         #header.clearfix.wrapper.company-info
             .left
@@ -126,17 +126,20 @@ html(lang="en")
             p.title <span class="red">Стоимость участия</span><br><span class="old-price">18 000 руб.</span><br>10 000 руб.
             p.subtitle Количество участников ограничено
             .content
+                .success-block
+                    span Форма успешно отправлена!<br>Спасибо за заявку.
                 form(action="" method="post").form.rf
                     .form-el
                         label Введите Ваше Имя
                         input(type="text" name="name" placeholder="Иванова Мария").rfield
                     .form-el
                         label Введите Ваш Email
-                        input(type="email" name="email" placeholder="ivanova@mail.ru").rfield
+                        input(type="text" name="email" placeholder="ivanova@mail.ru").rfield
                     .form-el
                         label Введите Ваш Телефон
                         input(type="text" name="phone" placeholder="+7(123) 456-78-90").rfield
                     .form-btn
+                        input(type="hidden" name="action" value="order")
                         button.btn.orange.btn_submit.disabled ЗАПИСАТЬСЯ НА ТРЕНИНГ
         #section-9.wrapper
             p.title отзывы участников о тренинг-ИНТЕНСИВЕ
@@ -183,9 +186,11 @@ html(lang="en")
                 .modal-title
                     span Заказать обратный звонок
                 .modal-desc
-                    | Вы можете закрыть свой отзыв, после закрытия отзыв будет перенес и не будет считаться
-                    | отрицательным, но все так же будет доступен для чтения другим пользователям сайта.
-                form(method="post").rf
+                    | У Вас есть вопросы?<br>
+                    | Закажите обратный звонок прямо сейчас! Введите Ваши данные, мы перезвоним и ответим подробно на все Ваши вопросы!
+                .success-block
+                    span Форма успешно отправлена!<br>Спасибо за заявку.
+                form(action="" method="post").rf
                     .modal-content
                         .form-el
                             label Введите Ваше Имя
@@ -194,6 +199,7 @@ html(lang="en")
                             label Введите Ваш Телефон <span class="red">*</span>
                             input(type="text" name="phone" placeholder="+7(123) 456-78-90").rfield
                     .modal-btns
+                        input(type="hidden" name="action" value="callback")
                         button.btn.primary.btn_submit.disabled Отправить
 
 

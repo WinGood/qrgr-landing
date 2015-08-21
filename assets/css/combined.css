@@ -551,7 +551,8 @@ body {
 .modal .modal-desc {
   border-bottom: 1px solid #dedede;
   padding: 15px 20px;
-  background: #efefef; }
+  background: #efefef;
+  line-height: 22px; }
 
 .modal .modal-btns {
   padding: 15px 20px;
@@ -571,6 +572,15 @@ body {
 
 .hidden {
   display: none; }
+
+.success-block {
+  background: #81bd45;
+  color: white;
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px 0; }
 
 #header {
   height: 100px; }
@@ -597,6 +607,7 @@ body {
   #section-1 .subtitle {
     text-transform: uppercase;
     font-size: 32px;
+    font-weight: bold;
     margin-bottom: 40px; }
   #section-1 .subtitle-2 {
     margin: 35px 0;
@@ -711,7 +722,8 @@ body {
   #section-4 .content p {
     font-size: 26px; }
     #section-4 .content p span {
-      color: #df0606; }
+      color: #df0606;
+      font-weight: bold; }
 
 #section-5 {
   position: relative;
