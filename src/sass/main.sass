@@ -44,6 +44,7 @@ body
   transition: all .2s ease
   cursor: pointer
   height: 30px
+  border: none
   line-height: 30px
   display: block
   text-transform: uppercase
@@ -63,14 +64,40 @@ body
     line-height: 48px
     display: inline-block
     border-radius: 6px
-    +linear-gradient(#c3a02c, #fcff04)
+    text-shadow: 0px 0px 1px #000
+    +linear-gradient(#fcff04, #c3a02c)
     &:hover
       +linear-gradient(#dde004, #dde004)
+.form
+  margin: 15px 0
+  .form-el
+    margin-bottom: 15px
+    label
+      display: block
+      margin-bottom: 10px
+    input
+      border: 1px solid #959595
+      color: #555555
+      display: inline-block
+      width: 100%
+      padding: 15px 75px
+      outline: none
+      font-size: 18px
+      &:focus
+        border: 1px solid #000
+  .form-btn
+    margin-top: 25px
+    .btn
+      display: block
+      width: 100%
+      font-size: 22px
+      margin: 0 auto
 // Blocks
 #header
   height: 100px
   .right
     padding-top: 15px
+.company-info
   .left
     line-height: 85px
     padding-left: 80px
@@ -225,7 +252,7 @@ body
       font-size: 22px
 #section-6
   background: $one-color
-  padding: 45px 0 20px 0
+  padding: 45px 0 35px 0
   .wrapper
     padding: 25px 45px
     border: 10px solid white
@@ -255,3 +282,88 @@ body
         li
           font-size: 18px
           margin-bottom: 4px
+#section-7
+  padding: 55px 0 50px 0
+  .title
+    font-size: 32px
+    font-weight: bold
+    text-align: center
+    margin-bottom: 35px
+    text-transform: uppercase
+  .left
+    padding-top: 30px
+  .right
+    padding-right: 85px
+    p
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: bold
+      margin-bottom: 20px
+    ul
+      margin: 0
+      padding-left: 0px
+      li
+        font-size: 20px
+        margin-bottom: 8px
+#section-8
+  padding: 35px 125px 25px 125px
+  background: #fff
+  border: 10px solid $one-color
+  .title, .subtitle
+    text-align: center
+  .title
+    font-size: 32px
+    font-weight: bold
+    margin-bottom: 20px
+    .red
+      color: $red
+      text-transform: uppercase
+    .old-price
+      text-decoration: line-through
+      color: #787978
+      font-size: 26px
+      font-weight: normal
+  .subtitle
+    font-size: 28px
+    margin-bottom: 45px
+#section-9
+  padding: 55px 25px
+  border-bottom: 10px solid $one-color
+  .title
+    font-size: 32px
+    text-transform: uppercase
+    font-weight: bold
+    text-align: center
+    margin-bottom: 50px
+  .review
+    margin-bottom: 65px
+    .left
+      width: 150px
+      margin-right: 50px
+    .right
+      width: 600px
+      line-height: 20px
+      .name
+        font-size: 20px
+        line-height: 24px
+    &:last-child
+      margin-bottom: 0
+#section-10
+  .right
+    padding-top: 40px
+#section-11
+  margin-top: 15px
+  .title
+    text-align: center
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 24px
+    line-height: 36px
+    .red
+      color: $red
+  ul
+    list-style-type: none
+    margin: 25px 0
+    padding: 0
+    li
+      margin-bottom: 5px
