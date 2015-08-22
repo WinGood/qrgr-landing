@@ -7,6 +7,8 @@ $(document).ready(function() {
         return false;
     });
 
+    $('.phone-input').mask('+9 (999) 999-9999');
+
     $('.modal-btn').fancybox({
         width: 380,
         autoHeight: true,

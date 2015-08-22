@@ -8,6 +8,7 @@ html(lang="en")
         script(src="https://code.jquery.com/jquery-1.11.3.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js")
         script(src="/assets/js/form-validator.js")
+        script(src="/assets/js/jquery.maskedinput.min.js")
         script(src="/assets/js/main.js")
     body
         #header.clearfix.wrapper.company-info
@@ -137,7 +138,7 @@ html(lang="en")
                         input(type="text" name="email" placeholder="ivanova@mail.ru").rfield
                     .form-el
                         label Введите Ваш Телефон
-                        input(type="text" name="phone" placeholder="+7(123) 456-78-90").rfield
+                        input(type="text" name="phone" placeholder="+7(123) 456-78-90").rfield.phone-input
                     .form-btn
                         input(type="hidden" name="action" value="order")
                         button.btn.orange.btn_submit.disabled ЗАПИСАТЬСЯ НА ТРЕНИНГ
@@ -197,7 +198,7 @@ html(lang="en")
                             input(type="text" name="name" placeholder="Иванова Мария")
                         .form-el
                             label Введите Ваш Телефон <span class="red">*</span>
-                            input(type="text" name="phone" placeholder="+7(123) 456-78-90").rfield
+                            input(type="text" name="phone" placeholder="+7(123) 456-78-90").rfield.phone-input
                     .modal-btns
                         input(type="hidden" name="action" value="callback")
                         button.btn.primary.btn_submit.disabled Отправить

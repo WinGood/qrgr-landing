@@ -53,8 +53,8 @@ function selectAction()
 
             $mailer = Swift_Mailer::newInstance($transport);
             $message = Swift_Message::newInstance($subject)
-                ->setFrom([$config['email'] => 'trening.qrgr.ru'])
-                ->setTo([$config['email'] => 'trening.qrgr.ru'])
+                ->setFrom(array($config['email'] => 'trening.qrgr.ru'))
+                ->setTo(array($config['email'] => 'trening.qrgr.ru'))
                 ->setBody($body, 'text/html');
             $mailer->send($message);
         } else {
