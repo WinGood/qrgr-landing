@@ -22,6 +22,19 @@ $(document).ready(function() {
         }
     });
 
+    $('.modal-btn-large').fancybox({
+        width: 540,
+        autoHeight: true,
+        autoSize: false,
+        padding: 0,
+        scrolling: 'no',
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+
     var requestSent = false;
 
     $('form').bind('submit', function() {

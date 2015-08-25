@@ -40,6 +40,8 @@ body
   background: $direction
   background: linear-gradient(to bottom, $direction 0%,$color-stops 100%)
 // UI Elements
+.orange
+  color: #f18e12
 .btn
   transition: all .2s ease
   cursor: pointer
@@ -86,6 +88,13 @@ body
       font-size: 18px
       &:focus
         border: 1px solid #000
+  .form-info
+    border: 1px solid #dedede
+    padding: 15px 20px
+    margin-top: 25px
+    background: #efefef
+    line-height: 16px
+    font-size: 12px
   .form-btn
     margin-top: 25px
     .btn
@@ -101,11 +110,16 @@ body
     padding-right: 50px
     font-size: 18px
     border-radius: 4px 4px 0 0
-  .modal-desc
+  .modal-desc, .modal-info
     border-bottom: 1px solid #dedede
     padding: 15px 20px
     background: #efefef
     line-height: 22px
+  .modal-info
+    border-bottom: none
+    border-top: 1px solid #dedede
+    line-height: 16px
+    font-size: 12px
   .modal-btns
     padding: 15px 20px
     border-top: 1px solid #c0c0c0
@@ -391,6 +405,11 @@ body
     padding-top: 40px
 #section-11
   margin-top: 15px
+  a
+    display: block
+    margin-bottom: 20px
+    &:hover
+      text-decoration: underline
   .title
     text-align: center
     font-weight: bold
